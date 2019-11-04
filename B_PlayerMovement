@@ -1,0 +1,47 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class playermove : MonoBehaviour {
+
+Rigidbody2D rb;
+public float jumpforce;
+public float hoz;
+public bool jumps;
+
+
+void Start () {
+
+rb = GetComponent<Rigidbody2D>();
+jumps = true;
+
+}
+
+void Update() {
+
+if (jumps == true) {
+if (Input.GetKey(KeyCode.W))
+{
+rb.AddForce(new Vector2(0, jumpforce));
+jumps = false;
+}
+}
+
+if (Input.GetKey(KeyCode.A))
+{
+rb.AddForce(new Vector2(-hoz, 0));
+transform.localScale = new Vector2(-1f, 1f);
+}
+
+if (Input.GetKey(KeyCode.D))
+{
+rb.AddForce(new Vector2(hoz, 0));
+transform.localScale = new Vector2(1f, 1f);
+}
+}
+void OnCollisionEnter2D(Collision2D col)
+{
+if (col.gameObject.tag == "ground")
+jumps = true;
+}
+}
