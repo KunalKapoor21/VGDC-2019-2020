@@ -1,0 +1,76 @@
+public bool p1InAnimation = false;
+public bool p2InAnimation = false;
+public bool p1InStanceUpper = false;
+public bool p1InStanceEqual = false;
+public bool p1InStanceLower = false;
+public bool p2InStanceUpper = false;
+public bool p2InStanceEqual = false;
+public bool p2InStanceLower = false;
+
+string p1StanceUpperAnim = GetComponent<StanceUpperAnimation>();
+string p1StanceEqualAnim = GetComponent<StanceUpperAnimation>();
+string p1StanceLowerAnim = GetComponent<StanceUpperAnimation>();
+string p2StanceUpperAnim = GetComponent<StanceUpperAnimation>();
+string p2StanceEqualAnim = GetComponent<StanceUpperAnimation>();
+string p2StanceLowerAnim = GetComponent<StanceUpperAnimation>();
+
+//STANCES - DONE
+if (Input.GetKeyDown("O"))
+{
+  if (p1inAnimation == false)
+  {
+    p1inAnimation == true;
+    p1StanceUpperAnim.Play();
+    p1inAnimation == false;
+  }
+}
+if (Input.GetKeyDown("I"))
+{
+  if (p1inAnimation == false)
+  {
+    p1inAnimation == true
+    p1StanceEqualAnim.Play();
+    p1inAnimation == false;
+  }
+}
+if (Input.GetKeyDown("U"))
+{
+  if (p1inAnimation == false)
+  {
+    p1inAnimation == true;
+    p1StanceLowerAnim.Play();
+    p1inAnimation == false;
+  }
+}
+if (Input.GetKeyDown("[9]"))
+{
+  if (p2inAnimation == false)
+  {
+    p2inAnimation == true;
+    p2StanceUpperAnim.Play();
+    p2inAnimation == false;
+  }
+}
+if (Input.GetKeyDown("[8]"))
+{
+  if (p2inAnimation == false)
+  {
+    p2inAnimation == true
+    p2StanceEqualAnim.Play();
+    p2inAnimation == false;
+  }
+}
+if (Input.GetKeyDown("[7]"))
+{
+  if (p2inAnimation == false)
+  {
+    p2inAnimation == true;
+    p2StanceLowerAnim.Play();
+    p2inAnimation == false;
+  }
+}
+//ATTACKS
+if (
+
+//MOVEMENTS
+if (Input.GetKeyDown("")
