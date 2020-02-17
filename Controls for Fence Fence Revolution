@@ -1,11 +1,16 @@
-public bool p1InAnimation = false;
-public bool p2InAnimation = false;
-public bool p1InStanceUpper = false;
-public bool p1InStanceEqual = false;
-public bool p1InStanceLower = false;
-public bool p2InStanceUpper = false;
-public bool p2InStanceEqual = false;
-public bool p2InStanceLower = false;
+//DOES THERE NEED TO BE A DIFFERENT ANIMATION FOR EACH PLAYER AS THEY ARE GOING IN OPPOSITE DIRECTIONS?
+public bool p1inAnimation = false;
+public bool p2inAnimation = false;
+
+//attacks used for effects but initialized here
+public bool p1InAttackJab = false;
+public bool p1InAttackSlash = false;
+public bool p1InAttackParry = false;
+public bool p1InAttackDisengage = false;
+public bool p2InAttackJab = false;
+public bool p2InAttackSlash = false;
+public bool p2InAttackParry = false;
+public bool p2InAttackDisengage = false;
 
 string p1StanceUpperAnim = GetComponent<StanceUpperAnimation>();
 string p1StanceEqualAnim = GetComponent<StanceUpperAnimation>();
@@ -13,6 +18,20 @@ string p1StanceLowerAnim = GetComponent<StanceUpperAnimation>();
 string p2StanceUpperAnim = GetComponent<StanceUpperAnimation>();
 string p2StanceEqualAnim = GetComponent<StanceUpperAnimation>();
 string p2StanceLowerAnim = GetComponent<StanceUpperAnimation>();
+
+string p1AttackJabAnim = GetComponent<AttackJabAnimation>();
+string p1AttackSwingAnim = GetComponent<AttackSwingAnimation>();
+string p1AttackParryAnim = GetComponent<AttackParryAnimation>();
+string p1AttackDisengageAnim = GetComponent<AttackDisengageAnimation>();
+string p2AttackJabAnim = GetComponent<AttackJabAnimation>();
+string p2AttackSwingAnim = GetComponent<AttackSwingAnimation>();
+string p2AttackParryAnim = GetComponent<AttackParryAnimation>();
+string p2AttackDisengageAnim = GetComponent<AttackDisengageAnimation>();
+
+string p1RightMovementAnim = GetComponent<RightMovement>();
+string p1LeftMovementAnim = GetComponent<LeftMovement>();
+string p2RightMovementAnim = GetComponent<RightMovement>();
+string p2LeftMovementAnim = GetComponent<LeftMovement>();
 
 //STANCES - DONE
 if (Input.GetKeyDown("O"))
@@ -69,8 +88,115 @@ if (Input.GetKeyDown("[7]"))
     p2inAnimation == false;
   }
 }
+
 //ATTACKS
-if (
+if (Input.GetKeyDown("H"))
+{
+  if (p1inAnimation == false)
+  {
+    p1inAnimation == true;
+    p1AttackJabAnim.Play();
+    p1inAnimation == false;
+  }
+}
+if (Input.GetKeyDown("J"))
+{
+  if (p1inAnimation == false)
+  {
+    p1inAnimation == true;
+    p1AttackSlashAnim.Play();
+    p1inAnimation == false;
+  }
+}
+if (Input.GetKeyDown("K"))
+{
+  if (p1inAnimation == false)
+  {
+    p1inAnimation == true;
+    p1AttackParryAnim.Play();
+    p1inAnimation == false;
+  }
+}
+if (Input.GetKeyDown("L"))
+{
+  if (p1inAnimation == false)
+  {
+    p1inAnimation == true;
+    p1AttackDisengageAnim.Play();
+    p1inAnimation == false;
+  }
+}
+if (Input.GetKeyDown("[4]"))
+{
+  if (p2inAnimation == false)
+  {
+    p2inAnimation == true;
+    p2AttackJabAnim.Play();
+    p2inAnimation == false;
+  }
+}
+if (Input.GetKeyDown("[5]"))
+{
+  if (p1inAnimation == false)
+  {
+    p2inAnimation == true;
+    p2AttackSlashAnim.Play();
+    p2inAnimation == false;
+  }
+}
+if (Input.GetKeyDown("[1]"))
+{
+  if (p1inAnimation == false)
+  {
+    p2inAnimation == true;
+    p2AttackParryAnim.Play();
+    p2inAnimation == false;
+  }
+}
+if (Input.GetKeyDown("[2]"))
+{
+  if (p1inAnimation == false)
+  {
+    p2inAnimation == true;
+    p2AttackDisengageAnim.Play();
+    p2inAnimation == false;
+  }
+}
 
 //MOVEMENTS
-if (Input.GetKeyDown("")
+if (Input.GetKeyDown("D"))
+{
+  if (p1inAnimation == false)
+  {
+    p1inAnimation == true;
+    p1RightMovementAnim.Play();
+    p1inAnimation == false;
+  }
+}
+if (Input.GetKeyDown("A"))
+{
+  if (p1inAnimation == false)
+  {
+    p1inAnimation == true;
+    p1LeftMovementAnim.Play();
+    p1inAnimation == false;
+  }
+}
+if (Input.GetKeyDown(KeyCode.RightArrow))
+{
+  if (p2inAnimation == false)
+  {
+    p2inAnimation == true;
+    p2RightMovementAnim.Play();
+    p2inAnimation == false;
+  }
+}
+if (Input.GetKeyDown(KeyCode.LeftArrow))
+{
+  if (p2inAnimation == false)
+  {
+    p2inAnimation == true;
+    p2LeftMovementAnim.Play();
+    p2inAnimation == false;
+  }
+}
