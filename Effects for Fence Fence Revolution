@@ -1,2 +1,39 @@
 //EFFECTS AND STUFF NEEDA BE COPIED AND PASTED FOR BASE
 //AFTERWARDS JUST FINISH THE SPEICIFIC INTERACTIONS OF &&
+
+public ParticleSystem particlePlayerHit
+public ParticleSystem particleSwordsHit
+public AudioSystem audioPlayerHit
+public AudioSystem audioSwordsHit
+public AudioSystem audioMiss
+
+public bool playerHit = false;
+public bool swordHit = false;
+public bool miss = false;
+
+
+void update()
+{
+  if (playerHit = true)
+  {
+    
+  }
+  if (swordHit = true)
+  {
+    
+  }
+}
+
+
+//attatched to player 1's sword and when the sword hits something with a 2d collider, then it will start this function
+void OnCollisionEnter2D(COllision2D col)
+{
+  if (col.FindGameObjectWithTag("Player") == true)
+  {
+    playerHit == true;
+  }
+  else if (col.FindGameObjectWithTag("Sword") == true)
+  {
+    swordHit == true;
+  }
+}
