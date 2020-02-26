@@ -2,16 +2,6 @@
 public bool p1inAnimation = false;
 public bool p2inAnimation = false;
 
-//attacks used for effects but initialized here
-public bool p1InAttackJab = false;
-public bool p1InAttackSlash = false;
-public bool p1InAttackParry = false;
-public bool p1InAttackDisengage = false;
-public bool p2InAttackJab = false;
-public bool p2InAttackSlash = false;
-public bool p2InAttackParry = false;
-public bool p2InAttackDisengage = false;
-
 string p1StanceUpperAnim = GetComponent<StanceUpperAnimation>();
 string p1StanceEqualAnim = GetComponent<StanceUpperAnimation>();
 string p1StanceLowerAnim = GetComponent<StanceUpperAnimation>();
